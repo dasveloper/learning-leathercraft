@@ -64,7 +64,7 @@ const CategoryPage = props => {
               }
               h2 :global(svg) {
                 height: 0.8em;
-                fill: ${theme.color.brand.primary};
+                fill: ${theme.color.neutral.gray.e};
               }
             `}</style>
           </Article>

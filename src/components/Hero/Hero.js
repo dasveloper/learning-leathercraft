@@ -9,65 +9,70 @@ const Hero = props => {
   return (
     <React.Fragment>
       <section className="hero">
-        <h1>
-          This is a demo site of&nbsp;the <strong>heroBlog</strong> GatsbyJS starter
-        </h1>
-        <button onClick={scrollToContent} aria-label="scroll">
-          <FaArrowDown />
-        </button>
+        <div className="hero-left">
+          <h1>Learning leathercraft</h1>
+          <h2>Projects and tutorials teaching the art of leathercraft</h2>
+          <button onClick={scrollToContent} aria-label="scroll">
+            <span>Latest posts</span>
+          </button>
+        </div>
       </section>
 
       {/* --- STYLES --- */}
       <style jsx>{`
         .hero {
-          align-items: center;
           background: ${theme.hero.background};
+          background-color: ${theme.background.color.alt};
           background-image: url(${backgrounds.mobile});
-          background-size: cover;
+          background-size: 100%;
+          background-position: bottom center;
+          background-repeat: no-repeat;
           color: ${theme.text.color.primary.inverse};
           display: flex;
-          flex-flow: column nowrap;
-          justify-content: center;
+          flex-flow: column;
+          justify-content: flex-start;
+          align-items: center;
+
           min-height: 100vh;
           height: 100px;
-          padding: ${theme.space.inset.l};
-          padding-top: ${theme.header.height.homepage};
+          padding: ${theme.space.inset.s};
         }
-
+        .hero-left {
+          flex-basis: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: ${theme.space.inset.s};
+        }
         h1 {
           text-align: center;
           font-size: ${theme.hero.h1.size};
-          margin: ${theme.space.stack.l};
+          margin: ${theme.space.stack.s};
           color: ${theme.hero.h1.color};
           line-height: ${theme.hero.h1.lineHeight};
           text-remove-gap: both 0 "Open Sans";
-
-          :global(strong) {
-            position: relative;
-
-            &::after,
-            &::before {
-              content: "›";
-              color: ${theme.text.color.attention};
-              margin: 0 ${theme.space.xs} 0 0;
-              text-shadow: 0 0 ${theme.space.s} ${theme.color.neutral.gray.k};
-            }
-            &::after {
-              content: "‹";
-              margin: 0 0 0 ${theme.space.xs};
-            }
-          }
+        }
+        h2 {
+          font-weight: ${theme.font.weight.standard};
+          margin: ${theme.space.xs} 0 ${theme.space.l} 0;
+          text-align: center;
+          font-size: ${`calc(${theme.heading.size.h3} )`};
         }
 
         button {
-          background: ${theme.background.color.brand};
+          background: ${theme.color.brand.dark};
           border: 0;
-          border-radius: 50%;
+          border-radius: 4px;
           font-size: ${theme.font.size.m};
+
+          color: ${theme.color.neutral.white};
           padding: ${theme.space.s} ${theme.space.m};
           cursor: pointer;
-          width: ${theme.space.xl};
-          height: ${theme.space.xl};
+          &:hover {
+            outline-style: none;
+            background: ${theme.color.brand.primary.active};
+          }
 
           &:focus {
             outline-style: none;
@@ -102,29 +107,29 @@ const Hero = props => {
           .hero {
             background-image: url(${backgrounds.tablet});
           }
-
+          .hero-left {
+            padding: ${theme.space.inset.l};
+          }
           h1 {
             max-width: 90%;
             font-size: ${`calc(${theme.hero.h1.size} * 1.3)`};
-          }
-
-          button {
-            font-size: ${theme.font.size.l};
           }
         }
 
         @from-width desktop {
           .hero {
+            flex-flow: row;
+            align-items: center;
+            justify-content: flex-start;
             background-image: url(${backgrounds.desktop});
+            padding-top: ${theme.header.height.homepage};
+            background-size: 50%;
+            background-position: center right;
           }
 
           h1 {
             max-width: 80%;
-            font-size: ${`calc(${theme.hero.h1.size} * 1.5)`};
-          }
-
-          button {
-            font-size: ${theme.font.size.xl};
+            font-size: ${`calc(${theme.hero.h1.size} * 1.2)`};
           }
         }
       `}</style>

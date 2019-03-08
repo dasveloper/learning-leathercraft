@@ -1,4 +1,4 @@
-import { FaArrowRight } from "react-icons/fa/";
+import { FaChevronRight } from "react-icons/fa/";
 import { FaCalendar } from "react-icons/fa/";
 import { FaTag } from "react-icons/fa/";
 import { FaUser } from "react-icons/fa/";
@@ -32,14 +32,11 @@ const Item = props => {
             <Img fluid={fluid} />
           </div>
           <h1>
-            {title} <FaArrowRight className="arrow" />
+            {title} <FaChevronRight className="arrow" />
           </h1>
           <p className="meta">
             <span>
               <FaCalendar size={18} /> {prefix}
-            </span>
-            <span>
-              <FaUser size={18} /> {author}
             </span>
             {category && (
               <span>
@@ -60,17 +57,15 @@ const Item = props => {
 
         li {
           border: 1px solid transparent;
-          border-radius: ${theme.size.radius.default};
           margin: ${`calc(${theme.space.default} * 2) 0 calc(${theme.space.default} * 3)`};
           padding: ${theme.space.inset.s};
           position: relative;
           transition: all ${theme.time.duration.default};
           background: transparent;
-
+          transition: all 0.3s cubic-bezier(.25,.8,.25,1);
           :global(.gatsby-image-outer-wrapper) {
-            border-radius: ${theme.size.radius.default};
-            border: 1px solid ${theme.line.color};
             overflow: hidden;
+           
           }
           :global(.gatsby-image-outer-wrapper img) {
             z-index: -1;
@@ -122,7 +117,7 @@ const Item = props => {
           font-size: 0.8em;
           padding: ${theme.space.m} ${theme.space.s};
           background: transparent;
-
+          align-items: center;
           :global(svg) {
             fill: ${theme.icon.color};
             margin: ${theme.space.inline.xs};
@@ -201,9 +196,7 @@ const Item = props => {
           }
           li {
             &:hover {
-              border: 1px solid ${theme.line.color};
-              box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.03);
-
+              box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
               &:after {
                 bottom: ${`calc(${theme.space.default} * -2.5)`};
               }
@@ -211,7 +204,6 @@ const Item = props => {
                 transform: scale(1.1);
               }
               h1 {
-                color: ${theme.blog.h1.hoverColor};
               }
               :global(.arrow) {
                 opacity: 1;
@@ -224,13 +216,13 @@ const Item = props => {
             }
             :global(.arrow) {
               display: inline-block;
-              fill: ${theme.color.special.attention};
-              stroke: ${theme.color.special.attention};
-              stroke-width: 40;
-              stroke-linecap: round;
+              fill: ${theme.color.brand.primary};
               opacity: 0;
+              font-size: ${`calc(${theme.blog.h1.size} * .6)`};
+              height:2em;
+
               transition: all 0.5s;
-              transform: translateX(-50%);
+              transform: translateX(-40%);
             }
           }
         }

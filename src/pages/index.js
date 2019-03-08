@@ -109,18 +109,18 @@ export const query = graphql`
         }
       }
     }
-    bgDesktop: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 1200, quality: 90, cropFocus: CENTER) {
+    bgDesktop: imageSharp(fluid: { originalName: { regex: "/bg-leather-sm/" } }) {
+      resize(width: 1200, quality: 100) {
         src
       }
     }
-    bgTablet: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 800, height: 1100, quality: 90, cropFocus: CENTER) {
+    bgTablet: imageSharp(fluid: { originalName: { regex: "/bg-leather-sm/" } }) {
+      resize(width: 800 quality: 90) {
         src
       }
     }
-    bgMobile: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 450, height: 850, quality: 90, cropFocus: CENTER) {
+    bgMobile: imageSharp(fluid: { originalName: { regex: "/bg-leather-sm/" } }) {
+      resize(width: 450 quality: 90) {
         src
       }
     }
