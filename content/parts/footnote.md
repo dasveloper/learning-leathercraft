@@ -3,4 +3,4 @@ title: footnote
 ---
 
 * [Privacy Policy](/privacy)
-* [Terms and Conditions](./terms)
+* [Terms and Conditions](/terms)
