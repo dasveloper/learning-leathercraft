@@ -1,23 +1,23 @@
 module.exports = {
-  siteTitle: "HeroBlog - a GatsbyJS starter", // <title>
-  shortSiteTitle: "HeroBlog - GatsbyJS starter", // <title> ending for posts and pages
-  siteDescription: "HeroBlog is a GatsbyJS starter.",
-  siteUrl: "https://gatsby-starter-hero-blog.greglobinski.com",
+  siteTitle: "Learning Leathercraft - Weekly Leathercraft Blog", // <title>
+  shortSiteTitle: "Learning Leathercraft - Weekly Leathercraft Blog", // <title> ending for posts and pages
+  siteDescription: "Learning Leathercraft is a weekly blog created for those who enjoy the art of leathercraft and would like to learn more about working with leather.",
+  siteUrl: "https://www.learningleathercraft.com",
   // pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
 
   /* author */
-  authorName: "greg lobinski",
-  authorTwitterAccount: "greglobinski",
+  authorName: "Justin Harr",
+  //authorTwitterAccount: "justinharr",
 
   /* info */
-  headerTitle: "greg lobinski",
-  headerSubTitle: "presents another one GatsbyJS starter",
+  headerTitle: "Learning Leathercraft",
+  headerSubTitle: "Weekly Leathercraft Blog",
 
   /* manifest.json */
-  manifestName: "HeroBlog - a GatsbyJS starter",
-  manifestShortName: "HeroBlog", // max 12 characters
+  manifestName: "Learning Leathercraft - Weekly Leathercraft Blog",
+  manifestShortName: "Leathercraft", // max 12 characters
   manifestStartUrl: "/index.html",
   manifestBackgroundColor: "white",
   manifestThemeColor: "#666",
@@ -31,9 +31,9 @@ module.exports = {
   gravatarImgMd5: "",
 
   // social
-  authorSocialLinks: [
-    { name: "github", url: "https://github.com/greglobinski" },
-    { name: "twitter", url: "https://twitter.com/greglobinski" },
-    { name: "facebook", url: "http://facebook.com/greglobinski" }
-  ]
+  //authorSocialLinks: [
+    //{ name: "github", url: "https://github.com/greglobinski" },
+  //  { name: "twitter", url: "https://twitter.com/greglobinski" },
+   // { name: "facebook", url: "http://facebook.com/greglobinski" }
+  //]
 };
