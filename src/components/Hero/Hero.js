@@ -32,9 +32,8 @@ const Hero = props => {
           flex-flow: column;
           justify-content: flex-start;
           align-items: center;
-
-          min-height: 100vh;
-          height: 100px;
+          height: 100vh;
+          min-height: 500px;
           padding: ${theme.space.inset.s};
         }
         .hero-left {
