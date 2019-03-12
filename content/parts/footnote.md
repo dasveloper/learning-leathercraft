@@ -2,5 +2,5 @@
 title: footnote
 ---
 
-* [Privacy Policy](./privacy)
+* [Privacy Policy](/privacy)
 * [Terms and Conditions](./terms)
