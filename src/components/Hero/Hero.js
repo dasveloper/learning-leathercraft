@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import logo from "../../images/png/hero-logo.png";
 
 import { FaArrowDown } from "react-icons/fa/";
 
@@ -10,7 +11,12 @@ const Hero = props => {
     <React.Fragment>
       <section className="hero">
         <div className="hero-left">
-          <h1>Learning leathercraft</h1>
+          <h1>
+          <img className="logo"
+            src={logo}
+            alt="Learning Leathercraft"
+          />
+          </h1>
           <h2>Projects and tutorials teaching the art of leathercraft</h2>
           <button onClick={scrollToContent} aria-label="scroll">
             <span>Latest posts</span>
@@ -35,6 +41,9 @@ const Hero = props => {
           height: 100vh;
           min-height: 500px;
           padding: ${theme.space.inset.s};
+        }
+        .logo{
+          max-width: 100%;
         }
         .hero-left {
           flex-basis: 50%;
